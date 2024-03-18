@@ -1,9 +1,11 @@
-#Importing everything from tkinter
+#Programmer: Rolan
+#Purpose: Simple calculator able to compute arithmetic
+#Importing tkinter library for GUI development
 from tkinter import *
-from tkinter import ttk #Gotta use ttk sometime because system's Tk version isn't updated
+from tkinter import ttk 
 
 root = Tk()
-root.title("Mi calcularolan")
+root.title("Calculator")
 
 
 e = Entry(root, width=40, borderwidth=4)
