@@ -1,4 +1,4 @@
-#Programmer: Rolan
+#Programmer: Rolan Belgrave
 #Purpose: Simple calculator able to compute arithmetic
 #Importing tkinter library for GUI development
 from tkinter import *
@@ -11,7 +11,7 @@ root.title("Calculator")
 e = Entry(root, width=40, borderwidth=4)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
-def button_click(number): #Puts clicked number on entry bar
+def button_click(number): #Places clicked number on entry bar
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
@@ -21,7 +21,7 @@ def button_clear():  #Clears the entry bar
 
 def button_add(): #adding function
     a = e.get()
-    global f_num #saves first number to operate with to a global variable
+    global f_num #saves first number to operate with, to a global variable
     global math_op
     math_op = "addition"
     f_num = float(a)
@@ -65,7 +65,7 @@ def button_equal():
     else:
         e.insert(0, f_num / s_num)
 
-#creates buttons 0 to 9
+#Definitions of buttons
 button_1 = Button(root, text="1", padx=40, pady=10, command=lambda: button_click(1))
 button_2 = Button(root, text="2", padx=40, pady=10, command=lambda: button_click(2))
 button_3 = Button(root, text="3", padx=40, pady=10, command=lambda: button_click(3))
@@ -84,7 +84,7 @@ button_substract = Button(root, text="-", padx=41, pady=10, command= button_subs
 button_multiply = Button(root, text="*", padx=40, pady=10, command= button_multiply)
 button_divide = Button(root, text="/", padx=40, pady=10, command= button_divide)
 
-#puts buttons on screen
+#display buttons on screen
 button_1.grid(row=3,column=0)
 button_2.grid(row=3,column=1)
 button_3.grid(row=3,column=2)
@@ -106,4 +106,4 @@ button_substract.grid(row=6,column=0)
 button_multiply.grid(row=6,column=1)
 button_divide.grid(row=6,column=2)
 
-root.mainloop() #this runs the loop (Similar to JavaScript animations sorta)
+root.mainloop() #Executes loop that continues to display buttons and text bar after cliked.
